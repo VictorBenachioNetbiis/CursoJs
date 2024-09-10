@@ -1,0 +1,102 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto; /* Evita que o conteudo seja cortado*/
+}
+
+
+/* Estilo para a seção de imagem e nome */
+.profile-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+img.perfil {
+    display: block;
+    margin: 0 10px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Garante que a imagem seja cortada corretamente */
+}
+
+h1 {
+    color: #007bff;
+    margin: 0;
+    font-size: 2em; /* Ajusta o tamanho do texto do nome */
+}
+
+/* Estilos para a seção de informações */
+.info-section {
+    display: flex;
+    flex-direction: column;
+}
+
+#sobre, #experiencia, #educacao, #habilidades, #contato {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+#sobre p, #experiencia p, #educacao p, #habilidades ul, #contato p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#habilidades ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#habilidades ul li {
+    background: #e7f1ff;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align:justify;
+    color: #aaa;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+
+#experiencia p {
+    margin-bottom: 10px;
+}

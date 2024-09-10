@@ -1,0 +1,25 @@
+/*Comentario CSS*/
+body {
+    background-color: black;
+}
+
+h1 {
+    color:blue;
+    background-color: yellow;
+    /*definindo cores pelo nome*/
+}
+
+#subtitulo {
+    color:rgb(10, 50, 100);
+    /*definindo cores pelo rgb*/
+}
+
+.amarelo {
+    color: #5678;
+    /*definindo cores pelo hexadecimal*/
+}
+
+#area-principal {
+    background-color: rgba(255, 228, 196, 0.459);
+    /*definindo core pelo rgba*/
+}
