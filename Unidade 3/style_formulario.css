@@ -7,28 +7,27 @@ body {
     height: 100vh;
     margin: 0;
 }
-
+/*Lembrando, justify content é usado em display flex (flexbox) aqui é usado para alinhar os itens do conteiner(body) no centro*/
 .container {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
 }
-
+/*Container é o id de todo conteudo dentro do body*/
 h2 {
     text-align: center;
     color: #007BFF;
     margin-bottom: 20px;
 }
-
+/*estilizando as labels*/
 label {
     margin-top: 10px;
     display: block;
     font-weight: bold;
 }
-
+/*nesse caso o display block pra dar um espaçamento da quebra de linha que ele dá dos elementos subsequentes*/
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -42,23 +41,23 @@ textarea {
     border-radius: 4px;
     box-sizing: border-box;
 }
-
+/*Nessa etapa acima é para estilizar igual os inputs, selects e o text area, box-sizzin é de acorod com o widhth e o height e entra todo o conteudo e inclue padding e borda*/
 .sexo, .preferencias {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
 }
-
+/*estilizando as divs sexo e preferencias*/
 .sexo label,
 .preferencias label {
     margin-right: 30px;
 }
-
+/*Estilizando as labels de sexo e preferencia no caso é o nome Sexo: e Preferencias de Contato:*/
 .sexo input,
 .preferencias input {
     margin-right: 5px;
 }
-
+/*Adicionando margin direita aos inputs de sexo e preferencias*/
 button {
     width: 100%;
     padding: 10px;
@@ -68,7 +67,8 @@ button {
     border-radius: 4px;
     cursor: pointer;
 }
-
+/*Estilizando o botão e adicionando um cursos pointer para quando o usuario colocar o mouse em cima ele mudar o cursor.*/
 button:hover {
     background-color: #0056b3;
 }
+/*hover para mudar a cor do botão quando usuario colocar cursor em cima.*/

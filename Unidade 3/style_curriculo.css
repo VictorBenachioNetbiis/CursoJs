@@ -1,4 +1,4 @@
-/* Estilos gerais */
+/* Estilizando body display flex pra centralizar com o justify-content*/
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -14,11 +14,10 @@ body {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 900px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /*indicar direção do conteudo do container como colunas, só usado no flexbox*/
     overflow: auto; /* Evita que o conteudo seja cortado*/
 }
 
@@ -35,7 +34,7 @@ img.perfil {
     border-radius: 50%;
     width: 150px;
     height: 150px;
-    object-fit: cover; /* Garante que a imagem seja cortada corretamente */
+    object-fit: cover; /* Garante que a imagem seja cortada corretamente, O conteúdo é redimensionado para cobrir todo o contêiner */
 }
 
 h1 {
@@ -51,52 +50,49 @@ h1 {
 }
 
 #sobre, #experiencia, #educacao, #habilidades, #contato {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
-
+/*Adicionando margem para os ids acima*/
 h2 {
     color: #007bff;
-    border-bottom: 2px solid #007bff;
+    border-bottom: 3px solid #007bff;
     padding-bottom: 5px;
     margin-bottom: 15px;
     font-size: 1.5em;
 }
-
+/*Estilizando os h2 com borda azul e configurando tamanho do texto e do padding bottom e margin botton*/
 #sobre p, #experiencia p, #educacao p, #habilidades ul, #contato p {
     color: #555;
     font-size: 16px;
     line-height: 1.5;
 }
-
+/*Estilizando os paragrafos dos id's de container acima e a lista de habilidades do texto*/
 #habilidades ul {
     list-style-type: none;
     padding: 0;
 }
-
+/*Estilizando a lista com list style type retirando os marcadores da lista*/
 #habilidades ul li {
     background: #e7f1ff;
     margin: 5px 0;
     padding: 8px;
-    border-radius: 4px;
+    border-radius: 10px;
 }
-
+/*Estilizando conteudo das li dentro da ul*/
 a {
     color: #007bff;
     text-decoration: none;
 }
-
+/*Estilizando o ancor do linkedin*/
 a:hover {
     text-decoration: underline;
 }
-
+/*adicionando um hover underlina para quando colocar o cursor em cima*/
 footer {
-    text-align:justify;
+    text-align:center;
     color: #aaa;
     margin-top: 20px;
     font-size: 14px;
 }
 
-
-#experiencia p {
-    margin-bottom: 10px;
-}
+/*estilizando footer ao final central*/
