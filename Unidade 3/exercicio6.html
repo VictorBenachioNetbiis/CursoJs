@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio6</title>
+</head>
+<body>
+    <script>
+        let nome = prompt("Digite seu nome");
+        let idade = prompt("Qual sua idade?");
+        let email = prompt("Qual seu e-mail?");
+        let telefone = prompt("Qual seu telefone?");
+        let pessoa = {
+            nome:nome,
+            idade: parseInt(idade),
+            email:email,
+            telefone:telefone
+        }
+        console.log(pessoa) //teste do objeto no consonle
+        document.write("Seu nome é:" + nome)
+        document.write("<br>")
+        document.write("Sua idade é:" + idade)
+        document.write("<br>")
+        document.write("Seu email é:" + email)
+        document.write("<br>")
+        document.write("Seu telefone é:" + telefone)
+        //Objeto pessoa no console
+        console.log(pessoa.nome)
+        console.log(pessoa.idade)
+        console.log(pessoa.email)
+        console.log(pessoa.telefone)
+
+
+    </script>
+</body>
+</html>

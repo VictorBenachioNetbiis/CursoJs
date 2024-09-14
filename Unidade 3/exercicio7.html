@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let valorTotalConta = parseInt(prompt("Digite o valor total da Conta:"))
+        let cliente = parseInt(prompt("Quantas pessoas são?"))
+        let dividirPorCliente = valorTotalConta / cliente
+        if (parseInt(cliente)== 2) {
+            document.write("Se for na pizzaria e com o conjugue, esquece a divisão, paga:" + valorTotalConta);
+        }
+        else {
+            document.write("<br>")
+            document.write("Com os brother, paga:" + dividirPorCliente)
+        }
+        
+
+    </script>
+    
+</body>
+</html>
