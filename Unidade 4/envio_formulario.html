@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h2>Formulário de Contato</h2>
+        <form id="formulario">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email">
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone">
+
+            <label>Sexo:</label>
+            <div class="sexo">
+                <input type="radio" id="masculino" name="sexo" value="masculino">
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="feminino" name="sexo" value="feminino">
+                <label for="feminino">Feminino</label>
+            </div>
+
+            <label>Preferências de Contato:</label>
+            <div class="preferencias">
+                <input type="checkbox" id="emailContato" name="preferencia" value="email">
+                <label for="emailContato">Email</label>
+                <input type="checkbox" id="telefoneContato" name="preferencia" value="telefone">
+                <label for="telefoneContato">Telefone</label>
+                <input type="checkbox" id="smsContato" name="preferencia" value="sms">
+                <label for="smsContato">SMS</label>
+            </div>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem aqui"></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('formulario');
+        const name = document.getElementById('nome');
+        const mensagem = document.getElementById('mensagem');
+        const emailContato =  document.getElementById('email');        
+        const telefoneContato =  document.getElementById('telefone');
+        const container = document.getElementById('container')
+        
+        form.addEventListener('submit', function(){
+            event.preventDefault();
+            handleSubmit();
+        })
+
+        function handleSubmit() {
+            container.innerHTML = '<h2>Formulário enviado com sucesso</h2>'
+        }
+
+    
+
+
+    </script>
+</body>
+</html>

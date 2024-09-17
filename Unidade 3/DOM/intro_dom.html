@@ -1,15 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
 </head>
 <body>
-    <h1 id="titulo">Vamos aprender dom</h1>
+    <h1 id="titulo" style="color: yellowgreen;">
+        Nosso titulo
+    </h1>
+    <p class="paragrafo">paragrafo</p>
+    <p class="paragrafo">paragrafo2</p>
+    <input type="text" name="nome" placeholder="Digite seu Nome">
+
+    <!-- Checkbox -->
+     <input type="checkbox" id="checkbox">
+     <label for="checkbox">Checkbox</label>
+    <br>
+
+
     <script>
-        let elTitulo = document.getElementById("titulo")
-        elTitulo.innerHTML = "Mudei o titulo com inner html" 
+        //selecionar elemtos
+        let titulo = document.getElementById('titulo');
+        let paragrafos = document.getElementsByClassName('paragrafo');
+        let paragrafosTag = document.getElementsByTagName('p');
+        let inputs = document.getElementsByName('nome');
+        let querySelectorTitulo = document.querySelector('#titulo');
+        let querySelectorParagrafo = document.querySelectorAll('.paragrafo');
+        let checkbox = document.getElementById('checkbox');
+
+        // Acessando atributos dos elementos
+        console.log(titulo.innerText); // só o conteudo
+        console.log(paragrafos[0].innerHTML); // Todo o HTml se tiver no elemento
+        
+        // Acessando os estilos do elemento// elementos compostos do css usa camelcase
+        console.log(titulo.style) // todo style
+        console.log(titulo.style.color);
+        //Acessando outras propriedades
+        console.log(inputs[0].placeholder);
+        console.log(inputs[0].name);
+        console.log(checkbox.checked);
+        console.log(checkbox.value);
+
+        //Modificando elementos
+        titulo.innerText = 'Novo Titulo';
+        paragrafos[0].innerText += 'Alterado';
+        inputs[0].value = "Valor Padrão";
+        checkbox.checked = true ;
+
+
+
+
+
+
     </script>
 </body>
 </html>

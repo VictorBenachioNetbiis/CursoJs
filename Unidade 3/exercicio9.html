@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratica9</title>
+</head>
+<body>
+    <h1 id="Titulo">Boas Vindas</h1>
+
+
+
+
+    <script>
+        let alteraTitulo = document.querySelector('#Titulo')
+        let qualCor = prompt('Qual cor do background voce deseja?EX:"red" ou "blue"?');
+        let qualCorText = prompt('Qual cor do Titulo voce deseja?EX:"red" ou "blue"?');
+        if (qualCor) {
+            alteraTitulo.style.color = qualCor
+            document.body.style.backgroundColor = qualCorText;
+            
+        } else {
+            alert("Digite uma cor válida")
+        }
+       
+        
+
+
+
+    </script>
+</body>
+</html>
