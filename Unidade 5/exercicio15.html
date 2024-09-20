@@ -1,14 +1,29 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio 15</title>
-</head>
-<body>
-    <script>
+<!DOCTYPE html>  
+<html lang="pt-BR">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>exercicio15</title>  
+    <script>  
+        function verificarAprovacao() {  
+            var nota = parseFloat(document.getElementById("nota").value);  
+            var resultado;  
 
-        
-    </script>
-</body>
+            if (nota >= 7) {  
+                resultado = "Aprovado";  
+            } else {  
+                resultado = "Reprovado";  
+            }  
+
+            document.getElementById("resultado").innerText = resultado;  
+        }  
+    </script>  
+</head>  
+<body>  
+    <h1>Verificação de Aprovação do Aluno</h1>  
+    <label for="nota">Digite a nota do aluno:</label>  
+    <input type="number" id="nota" step="0.1" required>  
+    <button onclick="verificarAprovacao()">Verificar</button>  
+    <p id="resultado"></p>  
+</body>  
 </html>
