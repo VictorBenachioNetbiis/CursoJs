@@ -1,0 +1,63 @@
+<!DOCTYPE html>  
+<html lang="pt-BR">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Cálculo de Preço do Produto</title>  
+</head>  
+<body>  
+    <h1>Cálculo de Preço do Produto</h1>  
+    <label for="preco">Digite o preço do produto: R$</label>  
+    <input type="number" id="preco" required>  
+    
+    <h2>Forma de pagamento:</h2>  
+    <input type="radio" name="formaPagamento" value="1" id="pagamento1" required>  
+    <label for="pagamento1">À vista em dinheiro ou cheque (10% de desconto)</label><br>  
+    
+    <input type="radio" name="formaPagamento" value="2" id="pagamento2">  
+    <label for="pagamento2">À vista no cartão de crédito (5% de desconto)</label><br>  
+    
+    <input type="radio" name="formaPagamento" value="3" id="pagamento3">  
+    <label for="pagamento3">Em 2 vezes (sem juros)</label><br>  
+    
+    <input type="radio" name="formaPagamento" value="4" id="pagamento4">  
+    <label for="pagamento4">Em 3 vezes com juros de 10%</label><br><br>  
+    
+    <button onclick="calcularPreco()">Calcular</button>  
+    
+    <h2 id="resultado"></h2>  
+    
+    <script>  
+        function calcularPreco() {  
+            const preco = parseFloat(document.getElementById("preco").value);  
+            const formaPagamento = parseInt(document.querySelector('input[name="formaPagamento"]:checked').value);  //pegando valor que ta marcado como inteiro para usar no switch case
+            let precoFinal;  
+            let parcelas;  
+
+            switch (formaPagamento) {  
+                case 1: // à vista em dinheiro ou cheque  
+                    precoFinal = preco - (preco * 0.10);  
+                    document.getElementById("resultado").innerText = "O valor a ser pago é: R$ " + precoFinal.toFixed(2);  
+                    break;  
+                case 2: // à vista no cartão de crédito  
+                    precoFinal = preco - (preco * 0.05);  
+                    document.getElementById("resultado").innerText = "O valor a ser pago é: R$ " + precoFinal.toFixed(2);  
+                    break;  
+                case 3: // em 2 vezes  
+                    parcelas = preco / 2;  
+                    document.getElementById("resultado").innerText = "O valor total é: R$ " + preco.toFixed(2) + "\nCada parcela é: R$ " + parcelas.toFixed(2);  
+                    break;  
+                case 4: // em 3 vezes com juros de 10%  
+                    const juros = preco * 0.10;  
+                    precoFinal = preco + juros;  
+                    parcelas = precoFinal / 3;  
+                    document.getElementById("resultado").innerText = "O valor total é: R$ " + precoFinal.toFixed(2) + "\nCada parcela é: R$ " + parcelas.toFixed(2);  
+                    break;  
+                default:  
+                    document.getElementById("resultado").innerText = "Forma de pagamento inválida.";  
+                    break;  
+            }  
+        }  
+    </script>  
+</body>  
+</html>

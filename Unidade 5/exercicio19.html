@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação de Nota</title>
+    <script>
+        function classificarNota() {
+            const nota = document.getElementById("nota").value;
+            let conceito;
+
+            if (nota >= 90 && nota <= 100) {
+                conceito = "Excelente";
+            } else if (nota >= 70 && nota < 90) {
+                conceito = "Bom";
+            } else if (nota >= 50 && nota < 70) {
+                conceito = "Regular";
+            } else if (nota >= 0 && nota < 50) {
+                conceito = "Insuficiente";
+            } else {
+                conceito = "Nota inválida";
+            }
+
+            document.getElementById("resultado").innerText = "Conceito: " + conceito;
+        }
+    </script>
+</head>
+<body>
+    <h1>Classificação de Nota</h1>
+    <label for="nota">Digite sua nota (0 a 100):</label>
+    <input type="number" id="nota" name="nota" min="0" max="100" required>
+    <button onclick="classificarNota()">Classificar</button>
+    
+    <p id="resultado"></p>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+</head>
+<body>
+    <h1>Calculadora Simples</h1>
+    <form id="calculadora">
+        <label for="num1">Número 1:</label>
+        <input type="number" id="num1" required><br><br>
+
+        <label for="num2">Número 2:</label>
+        <input type="number" id="num2" required><br><br>
+
+        <label for="operacao">Operação (+, -, *, /):</label>
+        <input type="text" id="operacao" required><br><br>
+
+        <button type="button" onclick="calcular()">Calcular</button>
+    </form>
+
+    <h2>Resultado: <span id="resultado"></span></h2>
+
+    <script>
+        function calcular() {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const operacao = document.getElementById('operacao').value;
+            let resultado;
+
+            switch (operacao) {
+                case '+':
+                    resultado = num1 + num2;
+                    break;
+                case '-':
+                    resultado = num1 - num2;
+                    break;
+                case '*':
+                    resultado = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 !== 0) {
+                        resultado = num1 / num2;
+                    } else {
+                        resultado = "Erro: Divisão por zero não permitida!";
+                    }
+                    break;
+                default:
+                    resultado = "Operação inválida! Use +, -, * ou /";
+            }
+
+            document.getElementById('resultado').textContent = resultado;
+        }
+    </script>
+</body>
+</html>
