@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Of</title>
+</head>
+<body>
+    <ul id="tarefas">
+
+    </ul>
+
+    <script>
+        let listaTarefasElement = document.getElementById('tarefas');
+        let tarefas = [
+            'Estudar HTML',
+            'Estudar CSS',
+            'Estudar JavaScript',
+            'Estudar PHP'
+        ];
+        for (let tarefa of tarefas) {
+           listaTarefasElement.innerHTML += `<li>${tarefa}</li>`
+        }
+    </script>
+</body>
+</html>
