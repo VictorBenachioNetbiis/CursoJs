@@ -1,0 +1,27 @@
+<!DOCTYPE html>  
+<html lang="pt-BR">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Soma de Números</title>  
+    <script>  
+        function somar() {  
+
+            let N = parseInt(prompt("Insira um número N:"));  
+            let soma = 0;  
+            let numero = 1;  
+ 
+            while (numero <= N) {  
+                soma += numero;  
+                numero++;  
+            }  
+
+            alert("A soma dos números de 1 a " + N + " é: " + soma);  
+        }  
+    </script>  
+</head>  
+<body>  
+    <h1>Calculadora de Soma</h1>  
+    <button onclick="somar()">Calcular a Soma de 1 a N</button>  
+</body>  
+</html>
