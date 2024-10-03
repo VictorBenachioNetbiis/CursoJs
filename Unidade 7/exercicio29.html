@@ -1,0 +1,41 @@
+<!DOCTYPE html>  
+<html lang="pt-br">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Formulário Cliente</title>  
+</head>  
+<body>  
+    <h1>Informe seus dados</h1>  
+    <form id="usuarioForm">  
+        <label for="name">Nome:</label>  
+        <input type="text" id="name"><br><br>  
+
+        <label for="idade">Idade:</label>  
+        <input type="number" id="idade" ><br><br>  
+
+        <label for="email">E-mail:</label>  
+        <input type="email" id="email" ><br><br>  
+
+        <button type="submit">Enviar</button>  
+    </form>  
+
+    <script>  
+      document.getElementById('usuarioForm').addEventListener('submit', function(event) {  
+    event.preventDefault();  
+    
+    const name = document.getElementById('name').value;  
+    const age = document.getElementById('idade').value;  
+    const email = document.getElementById('email').value;  
+
+    const userData = {  
+        nome: name,  
+        idade: age,      
+        email: email  
+    };  
+
+    console.log(userData);  
+});
+    </script>  
+</body>  
+</html>
